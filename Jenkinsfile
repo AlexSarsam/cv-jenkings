@@ -8,15 +8,14 @@ pipeline {
         }
         stage('Validar PHP') {
             steps {
-                sh 'find . -name *.php -exec php -l {} +'
+                sh 'find . -name "*.php" -exec php -l {} +'
             }
         }
         stage('Desplegar en Apache') {
             steps {
-                sh 'sudo rm -rf /var/www/html/cv_site'
-                sh 'sudo cp -r . /var/www/html/cv_site'
-                sh 'sudo chown -R www-data:www-data /var/www/html/cv_site'
-                sh 'sudo systemctl reload apache2'
+                sh 'rm -rf /var/www/html/cv_site'
+                sh 'cp -r . /var/www/html/cv_site'
+                sh 'chmod -R 755 /var/www/html/cv_site'
             }
         }
     }
