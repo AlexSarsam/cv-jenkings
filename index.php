@@ -1,10 +1,10 @@
 <?php
-header("Content-Type: text/html; charset=UTF-8");
+header('Content-Type: text/html; charset=UTF-8');
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>CV - Alex Sarsam</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
@@ -12,21 +12,23 @@ header("Content-Type: text/html; charset=UTF-8");
         h1 { color: #2c3e50; }
         h2 { color: #3498db; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
         .tag { background: #3498db; color: white; padding: 4px 10px; border-radius: 4px; margin: 3px; display: inline-block; }
+        .foto { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class='card'>
+        <img src='https://ik.imagekit.io/zbzkp6q1o/Captura%20de%20pantalla%202026-02-21%20163430.png?tr=w-300,h-300,c-maintain_ratio,f-webp,q-80' alt='Foto de perfil' class='foto'/>
         <h1>Alex Sarsam</h1>
         <p>Desarrollador Web | DWES 2026</p>
         <h2>Sobre mi</h2>
         <p>Estudiante de Desarrollo Web en Entorno Servidor.</p>
         <h2>Habilidades</h2>
-        <span class="tag">PHP</span>
-        <span class="tag">React</span>
-        <span class="tag">Jenkins</span>
-        <span class="tag">Docker</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Git</span>
+        <span class='tag'>PHP</span>
+        <span class='tag'>React</span>
+        <span class='tag'>Jenkins</span>
+        <span class='tag'>Docker</span>
+        <span class='tag'>MySQL</span>
+        <span class='tag'>Git</span>
         <h2>Proyectos</h2>
         <ul>
             <li><strong>CV Online con CI/CD</strong> - Pipeline Jenkins + Cloudflare</li>
